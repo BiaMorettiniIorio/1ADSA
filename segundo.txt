@@ -1,0 +1,1 @@
+Esse texto vou enviar para o github do meu repositório local.
