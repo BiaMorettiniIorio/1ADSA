@@ -1,0 +1,338 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    /*Coloca arial primeiramente, se não tiver vai colocar helvetica. Caso não tiver,
+    entra com o sans-serif,ou seja, tira a serifa, perninha*/
+    margin:0; 
+}
+
+
+.header{
+    background-color: black;
+    color:white;
+    overflow: auto; /* faz com que o tamanho sempre se ajuste */
+    border-bottom: 8px solid rgb(89, 93, 100);
+    /*três atributos: espessura, como é(sólida, pontinhos, tracejada) e cor*/
+    padding-top: 30px;
+    padding-bottom: 30px;
+    /*padding: 30px 0 30px 0 - sentido horário*/
+    position: fixed;
+    width: 100%;
+    margin-bottom: 50px;
+
+}
+
+.header img {
+    height: 50px;
+ 
+}
+
+/*Scroll*/
+webkit-scrollbar-track {
+    background-color: #f4f4f4;
+}
+::-webkit-scrollbar {
+    width: 10px;
+    background: black;
+}
+::-webkit-scrollbar-thumb {
+    background:rgb(44, 98, 197);
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    
+}
+
+.navbar {
+    list-style: none;/*tirar as bolinhas no caso de lista não ordenada*/
+    float: right;
+    overflow: auto;
+}
+
+.titulo {
+    margin: 0; 
+    float: left;
+    padding-top: 5px;
+    font-size: 45px;
+    
+}
+
+.header .navbar li {
+    
+    margin-left: 10px;
+    text-transform: uppercase;/*transforma o texto, nesse caso, para letras maiúsculas*/
+    display: inline-block;
+    font-size: 24px;
+
+}
+
+.header .navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+.destaque {
+    color: rgb(44, 98, 197);
+}
+
+
+/* BANNER */
+
+.banner {
+    background-color: coral;
+    background-image: url(imgs/intro.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; /*auto:sem mexer.  contain: maximo sem distorcer. 
+    cover: coloca na largura total independente da distorção.*/
+    height: 870px;
+
+}
+
+
+.banner img {
+     height: 600px;
+}
+
+
+.titulo-intro {
+    margin-top: 180px; 
+    float: left;
+    padding-top: 5px;
+    font-size: 30px;
+    color: cornflowerblue;
+    width: 30%;
+    text-align: left;
+    border-radius: 10px;
+}
+
+.titulo-intro img {
+    height: 30px;
+
+}
+
+.saiba-mais button {
+    border: 0;
+    background-color: rgb(44, 98, 197);
+    color: white;
+    text-transform: uppercase;
+    padding: 10px 30px;
+    margin-top: 30px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    height: 50px;
+}
+
+.saiba-mais {
+    text-align: center;
+     background-color: black;
+    height: 115px;
+
+    
+}
+
+
+/* MISSÃO VISÃO VALORES*/
+
+.box img {
+    height: 200px;
+   
+}
+
+.box {
+    overflow: auto;
+    background-color: rgb(172, 174, 177);
+
+}
+
+.box-item {
+    float: left;
+    text-align: center;
+    width: 25%;
+    padding: 70px;
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+
+}
+
+
+/*SOBRE*/
+
+.div-total-sobre {
+    background-color:rgb(209, 210, 211);
+    overflow: auto;
+    align-items: center;
+    width: 70%;
+    margin: auto;
+     
+
+    
+}
+
+.sobre {
+    overflow: auto;
+    background-color: rgb(209, 210, 211);
+    align-items: center;
+
+
+}
+
+.sobre img {
+    height: 40px;
+   
+}
+
+.imagem-1 {
+    background-color: coral;
+    background-image: url(imgs/time.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; /*auto:sem mexer.  contain: maximo sem distorcer. 
+    cover: coloca na largura total independente da distorção.*/
+    height: 800px;
+    width: 100%;
+    border-bottom: 8px solid rgb(89, 93, 100);
+    
+}
+
+
+.sobre-titulo-2 {
+    text-align: center;
+    color: rgb(44, 98, 197);
+    font-size: 90px;
+    font-weight: bold;
+    margin: 0;
+    margin-top: 30px;
+   
+ }
+ 
+
+.sobre-texto {
+    float: left;
+    text-align: center;
+    width: 30%;
+    padding: 20px;
+    text-align: left;
+    font-weight: bold;
+    padding: 60px 70px 70px 70px;
+    
+   
+}
+
+
+.sobre-texto p {
+    color: rgb(89, 93, 100);
+    font-size: 28px;
+    margin-top: 0;
+    
+}
+
+.sobre-imagem img{
+    height: 400px;
+    padding: 100px 70px 70px 70px;
+}
+
+.sobre-imagem {
+    float: left;
+    text-align: center;
+   
+}
+
+
+/*CLIENTES*/
+.clientes {
+    background-color: rgb(209, 210, 211);
+}
+
+.clientes img{
+    height: 80px;
+   
+}
+
+.div-total-clientes {
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 30px;
+
+}
+
+.div-total-clientes p {
+    margin: 0;
+    padding-top: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: rgb(44, 98, 197);
+    font-size: 90px;
+    font-weight: bold;
+
+}
+
+.box-item-cliente-div-1 {
+    display: inline-block;
+    margin: 0;
+}
+
+.box-item-cliente-div-2 {
+    display: inline-block;
+    margin: 0;
+}
+
+
+.box-item-cliente-div-3 {
+    display: inline-block;
+    margin: 0;
+}
+
+.box-item-cliente {
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(89, 93, 100);
+    align-items: center;
+    text-align: center;
+    padding-top: 25px;
+    width: 20%;
+    padding: 40px;
+    display: inline-block;
+   
+  
+}
+
+.box-item-cliente h3 {
+    margin: 0;
+    margin-top: 20px;
+    
+}
+
+
+/*FOOTER*/
+
+.footer {
+    text-align: center;
+    align-content: center;
+    background-color: black;
+    height: 140px;
+    border-top: 8px solid  rgb(44, 98, 197);
+    overflow: auto;
+    
+}
+
+.footer h4 a {
+    text-decoration: none;
+     color: white;
+}
+
+.footer h4 {
+    margin: 0;
+    font-weight: 100;
+    color: white;
+    margin-top: 25px;
+    margin-bottom: 30px;
+    font-size: 20px;
+    padding-top: 40px;
+}
