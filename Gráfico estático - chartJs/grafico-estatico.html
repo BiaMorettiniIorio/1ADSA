@@ -1,113 +1,112 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ChartJS</title>
-    <!--Link para código do ChartsJS-->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
-    
-<style>
-    .meu-grafico {
-    width: 80%;
-    margin: auto;
-}
-</style>
+
+    <style>
+        .graficoEstatico {
+            width: 80%;
+            margin: auto;
+            background-color: rgb(197, 188, 175);
+            margin-top: 60px;
+            border-radius: 15px;
+        }
+
+        
+    </style>
 
 </head>
 
 <body>
-    <!--Coloque sempre o gráfico em uma div, fica mais fácil para ajustar na página-->
-    <div class="meu-grafico">
-        <!--Gráfico virá aqui-->
+
+    <div class="graficoEstatico">
+
+        <!-- O elemento <canvas> é apenas um elemento para gráficos, 
+        devemos usar um script para realmente extrair os gráficos.
+        Basicamente, uma tela é uma região definida no código HTML 
+        com atributos de altura e largura.
+        Canvas usa vários métodos para desenhar formas personalizadas 
+        (círculo, semicírculo, Retângulo e Quadrado) caracteres, e 
+        adicionar imagens.
+        Primeiro de tudo vamos precisar para colocar a tag canvas 
+        em algum lugar dentro do nosso HTML, criar uma função 
+        JavaScript que acessa a tag canvas, uma vez que a página
+        carrega e depois utilizar o HTML5 Canvas API para desenhar
+        suas visualizações.
+        O IE9, Chrome, Mozilla Firefox, Opera e Safari 
+        suportam a tag <canvas>.
+        Fonte: http://www.linhadecodigo.com.br/artigo/3488/entendendo-a-tag-canvas-no-html-5.aspx#ixzz6s8KahgMe -->
+            
         <canvas id="myChart"></canvas>
+
     </div>
-   
+    
 </body>
 
 </html>
 
 <script>
-    // ctx é o contexto. Onde é para o gráfico ser renderizado? 
-    // Na div myChart! Vamos selecioná-la por getElementById
+    // O DOM (Document Object Model) é uma interface que 
+    // representa como os documentos HTML e XML são lidos 
+    // pelo seu browser. Após o browser ler seu documento 
+    // HTML, ele cria um objeto que faz uma representação 
+    // estruturada do seu documento e define meios de como 
+    // essa estrutura pode ser acessada. Nós podemos acessar 
+    // e manipular o DOM com JavaScript, é a forma mais 
+    // fácil e usada.
+    //https://tableless.com.br/entendendo-o-dom-document-object-model/
+    
     var ctx = document.getElementById('myChart');
 
-    // ao criar um new Chart, colocamos ->
-    // (contexto, { type, data e options} )
-    var meuGrafico = new Chart(ctx, {
-        // TYPE -> qual o tipo do gráfico? será um gráfico de barras? linhas? define aqui
+    var graficoEstatico = new Chart(ctx, {
         type: 'bar',
 
-        // DATA -> os dados renderizados no gráfico:
         data: {
-            // Informações em Eixo X
-            labels: ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"],
-            // Datasets -> grupos de dados!
+            labels: ["Jan", "Fev", "Mar", "Abr", "Mai", 
+            "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"],
             datasets: [
-            // Primeiro dataset    
-            {
-                // Qual o título deste dataset?
-                label: "Pedidos Mensais - 2019",
-                // Dados? Lembre-se, respectivos a labels.
-                data: [300, 250, 400, 450, 460, 500, 600, 700, 800, 900, 700, 500],
-                // expessura da linha
-                borderWidth: 5,
-                // cor da linha - em rgba, a é a opacidade.
-                // 1 = 100% // 0.5 = 50%
-                borderColor: '#557DDB',
-                // cor de "fundo" dos dados na tela. transparent = sem cor.
-                backgroundColor: '#557DDB',
-                
-            },
+                {
+                    label: "Pedidos Mensais - 2019",
+                    data: [300, 250, 400, 450, 460, 500, 
+                    600, 700, 800, 900, 700, 500],
+                    backgroundColor: '#557DDB',
+                   
 
-            // Segundo dataset
-            {
-                // igual o anterior. Mas, aqui, type line
-                type: 'bar',
-                label: "Pedidos Mensais - 2020",
-                data: [400, 500, 400, 500, 600, 700, 600, 750, 900, 1000, 1050, 1200],
-                borderWidth: 5,
-                borderColor: '#223155',
-                backgroundColor: '#223155',
-            }
+                },
+
+                {
+                    type: 'bar',
+                    label: "Pedidos Mensais - 2020",
+                    data: [400, 500, 400, 500, 600, 700, 
+                    600, 750, 900, 1000, 1050, 1200],
+                    backgroundColor: '#223155',
+                
+                }
             ]
         },
-        
-        // OPTIONS -> Opções globais
         options: {
-            
+
             title: {
-                // mostrar titulo?
                 display: true,
-                // tamanho do texto
-                fontSize: 30,
-                // texto no titulo
+                fontSize: 25,
                 text: "Pedidos Mensais",
-                // onde? right? left? top?
                 position: 'left',
             },
             legend: {
-                // mostrar legenda?
                 display: true,
-                // ao contrario? (dataset 1 depois de 2)
                 reverse: true,
-                // onde?
                 position: 'right'
             },
             layout: {
-            padding: {
-                // padding do grafico, pode add right e bottom também
-                left: 100,
-                top: 100
+            padding: 40
             },
-           
         }
-        }
+    
+
     })
 
-    // mudando cor de fonte de tudo
     Chart.defaults.global.defaultFontColor = "#0A4AE1";
 </script>
-© 2021 GitHub, Inc.
