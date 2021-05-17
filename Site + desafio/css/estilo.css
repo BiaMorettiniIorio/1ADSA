@@ -62,7 +62,7 @@ webkit-scrollbar-track {
     
 }
 
-.header .navbar li {
+.header .navbar ul {
     
     margin-left: 10px;
     text-transform: uppercase;/*transforma o texto, nesse caso, para letras maiúsculas*/
