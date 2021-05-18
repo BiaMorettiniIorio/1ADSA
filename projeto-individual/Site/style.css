@@ -56,7 +56,7 @@
 }
 
 .login{
-    width: 45%;
+    width: 35%;
     background-color: burlywood;
     float: left;
     height: 80px;
@@ -198,3 +198,50 @@
    
 }
 
+/* Página Cadastro */
+
+.box-cadastro{
+    background-color: rgb(220, 216, 216);
+    border-radius: 5px;
+    width: 45%;
+    height: 580px;
+    margin-top: 20px;
+    float: left;
+    margin-left: 40px;
+    overflow: auto;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: auto;
+  
+}
+
+.cadastro{
+    text-align: center;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    overflow: auto;
+    
+}
+
+.input-cadastro{
+    border-radius: 5px;
+    border: none;
+    margin: 10px;
+    height: 40px;
+    width: 300px;
+  
+}
+
+.botao-cadastro{
+    font-size: 15px;
+    border-radius:5px;
+    border:none;
+    width: 90px;
+    height: 40px;
+    outline: none;
+    
+}
